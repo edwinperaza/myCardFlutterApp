@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,39 +11,32 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                height: double.infinity,
-                width: 100.0,
-                color: Colors.red,
-                child: Text('Container 1'),
+            child: Column(
+          children: <Widget>[
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage('images/i_am_rich_app_icon.png'),
+            ),
+            Text(
+              'Edwin Peraza',
+              style: TextStyle(
+                fontSize: 40.0,
+                color: Colors.white,
+                fontFamily: 'Pacifico',
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.amberAccent,
-                  ),
-                ],
+            ),
+            Text(
+              'Flutter Developer'.toUpperCase(),
+              style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.teal.shade100,
+                letterSpacing: 2.5,
+                fontFamily: 'SourceSansPro',
+                fontWeight: FontWeight.bold,
               ),
-              Container(
-                height: double.infinity,
-                width: 100.0,
-                color: Colors.blue,
-                child: Text('Container 2'),
-              ),
-            ],
-          ),
-        ),
+            ),
+          ],
+        )),
       ),
     );
   }
