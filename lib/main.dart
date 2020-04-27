@@ -11,90 +11,83 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-            child: Column(
-          children: <Widget>[
-            CircleAvatar(
-              radius: 50.0,
-              backgroundImage: AssetImage('images/i_am_rich_app_icon.png'),
-            ),
-            Text(
-              'Edwin Peraza',
-              style: TextStyle(
-                fontSize: 40.0,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/i_am_rich_app_icon.png'),
+              ),
+              Text(
+                'Edwin Peraza',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontFamily: 'Pacifico',
+                ),
+              ),
+              Text(
+                'Flutter Developer'.toUpperCase(),
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.teal.shade100,
+                  letterSpacing: 2.5,
+                  fontFamily: 'SourceSansPro',
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 250.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
                 color: Colors.white,
-                fontFamily: 'Pacifico',
-              ),
-            ),
-            Text(
-              'Flutter Developer'.toUpperCase(),
-              style: TextStyle(
-                fontSize: 20.0,
-                color: Colors.teal.shade100,
-                letterSpacing: 2.5,
-                fontFamily: 'SourceSansPro',
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Container(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(
-                vertical: 10.0,
-                horizontal: 25.0,
-              ),
-              padding: EdgeInsets.all(
-                10.0,
-              ),
-              child: Row(
-                children: <Widget>[
-                  Icon(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
                     Icons.phone,
                     color: Colors.teal,
                   ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
+                  title: Text(
                     '+1 123 453 4554',
                     style: TextStyle(
                       color: Colors.teal.shade900,
                       fontFamily: 'SourceSansPro',
                       fontSize: 20.0,
                     ),
-                  )
-                ],
+                  ),
+                ),
               ),
-            ),
-            Container(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(
-                vertical: 10.0,
-                horizontal: 25.0,
-              ),
-              padding: EdgeInsets.all(
-                10.0,
-              ),
-              child: Row(
-                children: <Widget>[
-                  Icon(
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
                     Icons.email,
                     color: Colors.teal,
                   ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
+                  title: Text(
                     'demo@domain.com',
                     style: TextStyle(
                       color: Colors.teal.shade900,
                       fontFamily: 'SourceSansPro',
                       fontSize: 20.0,
                     ),
-                  )
-                ],
+                  ),
+                ),
               ),
-            )
-          ],
-        )),
+            ],
+          ),
+        ),
       ),
     );
   }
